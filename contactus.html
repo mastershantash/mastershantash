@@ -13,6 +13,7 @@
     <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./css/social.css">
     <link rel="stylesheet" href="./css/stylesheet.css">
+    <link rel="stylesheet" href="./css/contactus.css">
 
     <script type="text/javascript" src="./data.js"></script>
 
@@ -51,7 +52,7 @@
                         </div>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="./contactus.html" style="color: white;">Contact Us</a>
+                        <a class="nav-link" href="#" style="color: white;">Contact Us</a>
                     </li>
                 </ul>
                 <div class="col-md-4 col-sm-12 justify-content-center">
@@ -69,34 +70,45 @@
             style="max-height:90vh; min-height: 90vh; color: white; overflow-y: auto; margin:0; padding-left: 15; padding-right: 0;">
             <div class="col-12 row" style="padding-left: 15; padding-right: 0;">
                 
-                <!--Title-->
-                <div class="col-lg-2 d-lg-block d-none"></div>
-                <div id="title" class="col-lg-8" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5); padding-top: 5vh;"></div>
-                <div class="col-lg-2 d-lg-block d-none"></div>
-                <!--Carousel-->
-                <div class="col-lg-2 d-lg-block d-none"></div>
-                <div class="col-lg-1 d-lg-block d-none" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);"></div>
-                <div id="demo" class="carousel slide col-lg-6" data-ride="carousel" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);">
-                    <ul id="carousel-indicators" class="carousel-indicators"></ul>
-                    <div id="carousel-inner" class="carousel-inner"></div>
-                    <a class="carousel-control-prev" href="#demo" data-slide="prev">
-                        <span class="carousel-control-prev-icon"></span>
-                    </a>
-                    <a class="carousel-control-next" href="#demo" data-slide="next">
-                        <span class="carousel-control-next-icon"></span>
-                    </a>
-                </div>
-                <div class="col-lg-1 d-lg-block d-none" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);"></div>
-                <div class="col-lg-2 d-lg-block d-none"></div>
+                
                 <!--Welcome-->
                 <div class="col-lg-2 d-lg-block d-none"></div>
                 <div class="col-lg-8" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5);">
-                    <h3>Welcome to Amogh</h3>
-                    We at Amogh Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aperiam autem accusantium itaque assumenda nam, excepturi quas numquam odit quidem dolores ratione necessitatibus mollitia saepe enim et aut, dicta animi vitae!
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Excepturi alias, aliquam adipisci perferendis harum distinctio ex aut nemo, dignissimos porro cupiditate libero illo natus non quis. Eos, cum? Et, in!
-                    
+                    <div class="container">
+                        <div style="text-align:center">
+                          <h2>Contact Us</h2>
+                          <p>Send us your enquiry.</p>
+                        </div>
+                        <div class="row">
+                          <div class="column d-lg-block d-none">
+                            <img src="imgs/products/amogh_1.png" style="width:100%">
+                          </div>
+                          <div class="column">
+                            <form action="/action_page.php">
+                              <label for="fname">First Name</label>
+                              <input class="formInput" type="text" id="fname" name="firstname" placeholder="Your name..">
+                              <label for="lname">Last Name</label>
+                              <input class="formInput" type="text" id="lname" name="lastname" placeholder="Your last name..">
+                              <label for="email">E-Mail</label>
+                              <input class="formInput" type="text" id="email" name="email" placeholder="Your email..">
+                              <label for="country">Country</label>
+                              <select class="formInput" id="country" name="country">
+                                <option value="australia">Australia</option>
+                                <option value="canada">Canada</option>
+                                <option value="australia">India</option>
+                                <option value="usa">USA</option>
+                              </select>
+                              <label for="subject">Subject</label>
+                              <textarea class="formInput" id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+                              <button class="btn my-2 my-sm-0" type="submit">Send</button>
+                            </form>
+                          </div>
+                        </div>
+                      </div>
                 </div>
                 <div class="col-lg-2 d-lg-block d-none"></div>
+
+                
                 
 
             </div>

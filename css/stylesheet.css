@@ -1,5 +1,5 @@
 .mainBody {
-    background: url(./img/MainBack.jpg) fixed center no-repeat;
+    background: url(/css/img/MainBack.jpg) fixed center no-repeat;
     background-size: cover;
 }
 
@@ -169,3 +169,25 @@ border-bottom: 0em;
         padding-top: 19%;
     }
 }
+
+sub { 
+    vertical-align: sub; 
+    font-size: small; 
+} 
+
+sup { 
+    vertical-align: super; 
+    font-size: small; 
+} 
+
+#carousel-indicators{
+    bottom: -1vh;
+}
+@media only screen and (max-width: 600px) {
+    .front-page-title{
+        min-height: 15vh;
+    }
+    #carousel-indicators{
+        bottom: -4vh;
+    }
+  }

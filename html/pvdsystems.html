@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/social.css">
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    <title>Amogh Technologies</title>
+</head>
+
+<body class="mainBody">
+
+    <div class="col-12" style="min-height: 100vh;">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark" style="z-index: 2000;">
+
+            <a class="navbar-brand" href="/">Amogh Technologies</a>
+
+
+            <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navb"
+                onclick="onToggle">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+
+            <div class="collapse navbar-collapse" id="navb">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/pvdsystems.html" style="color: white;">Catalog</a>
+                    </li>
+                    <!--<li class="nav-item">
+                        <a class="nav-link disabled" href="javascript:void(0)" style="color: white;">Disabled</a>
+                    </li>-->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" style="color: white;">
+                            PVD Systems
+                        </a>
+                        <div id="dropdown-links" class="dropdown-menu bg-dark" aria-labelledby="navbarDropdown">
+                            <!--<div class="dropdown-divider"></div>-->
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/html/contactus.html" style="color: white;">Contact Us</a>
+                    </li>
+                </ul>
+                <div class="col-md-4 col-sm-12 justify-content-center">
+                    <form class="form-inline my-2 my-lg-0" autocomplete="off">    
+                        <input id="myInput" class="form-control mr-sm-2" type="text" placeholder="Search" onkeydown="searchEnter()">
+                        <button id="searchbtn" class="btn my-2 my-sm-0" type="button" onclick="search()">Search</button>
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+
+
+        <div id="bottom-div" class="fixed-bottom col-12 row"
+            style="max-height:90vh; min-height: 90vh; color: white; overflow-y: auto; margin:0; padding-left: 15;">
+            <div class="col-lg-2 d-lg-block d-none"></div>
+            <div class="col-lg-8" style="background: rgb(0, 0, 0); background: rgba(0, 0, 0, 0.5); margin:0; padding-left: 15;">
+                <div class="row col-12">
+                    <div class="d-sm-block d-lg-none col-sm-12 col-lg-0"><br><br></div>
+            
+                    <div class="col-lg-3 col-sm-0"></div>
+                    <div class="col-lg-6 col-sm-12 justify-content-center">
+                        <h1 id="name" class="col-lg-12 col-sm-12" style="text-align: center; padding-top: 10px;">PVD Systems</h1>
+                    </div>
+                    <div class="col-lg-3 col-sm-0"></div>
+                </div>
+                <div class="row justify-content-center" style="padding-top: 2rem;">
+
+                    <div class="card m-2" style="width: 15rem;">
+                        <img src="/imgs/products/phoenix.png" class="card-img-top" alt="Phoenix" width="238" height="140">
+                        <div class="card-body" style="background-color: #343a40;">
+                            <h5 class="card-title">Phoenix</h5>
+                            <p class="card-text">UHV Magnetron Deposition System</p>
+                            <a href="/html/product.html?productName=phoenix" class="btn btn-primary btn-dark">Specifications</a>
+                        </div>
+                    </div>
+
+                    <div class="card m-2" style="width: 15rem;">
+                        <img src="/imgs/products/trinity.png" class="card-img-top" alt="Trinity" width="238" height="140">
+                        <div class="card-body" style="background-color: #343a40;">
+                            <h5 class="card-title">Trinity</h5>
+                            <p class="card-text">Magnetron Deposition System </p>
+                            <a href="/html/product.html?productName=trinity" class="btn btn-primary btn-dark">Specifications</a>
+                        </div>
+                    </div>
+
+                    <div class="card m-2" style="width: 15rem;">
+                        <img src="/imgs/products/opal-I_1.png" class="card-img-top" alt="Opal-I" width="238" height="140">
+                        <div class="card-body" style="background-color: #343a40;">
+                            <h5 class="card-title">Opal-I</h5>
+                            <p class="card-text">1” Magnetron Sputtering Gun</p>
+                            <a href="/html/product.html?productName=opal-i" class="btn btn-primary btn-dark">Specifications</a>
+                        </div>
+                    </div>
+
+                    <div class="card m-2" style="width: 15rem;">
+                        <img src="/imgs/products/opal-II_1.png" class="card-img-top" alt="Opal-II" width="238" height="140">
+                        <div class="card-body" style="background-color: #343a40;">
+                            <h5 class="card-title">Opal-II</h5>
+                            <p class="card-text">2” Magnetron Sputtering Gun</p>
+                            <a href="/html/product.html?productName=opal-ii" class="btn btn-primary btn-dark">Specifications</a>
+                        </div>
+                    </div>
+
+                    <div class="card m-2" style="width: 15rem;">
+                        <img src="/imgs/products/amogh_1.png" class="card-img-top" alt="Amogh" width="238" height="140">
+                        <div class="card-body" style="background-color: #343a40;">
+                            <h5 class="card-title">Amogh</h5>
+                            <p class="card-text">Mask-less Optical Lithography Setup</p>
+                            <a href="/html/product.html?productName=amogh" class="btn btn-primary btn-dark">Specifications</a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-2 d-lg-block d-none"></div>
+
+        </div>
+        
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+    <script src="/js/data.js"></script>
+    <script src="/js/nav.js"></script>
+    <script src="/js/index.js"></script>
+    
+</body>
+
+</html>

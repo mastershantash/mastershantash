@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/social.css">
+    <link rel="stylesheet" href="./css/stylesheet.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"></script>
+
+    <title>Boot</title>
+</head>
+
+<body class="mainBody">
+    <div class="row col-md-12 col-sm-12 fixed-header" id="someDiv">
+        <div class="col-md-3" style="display:flex; justify-content: center;">
+            <a href="#section0">
+                <h4>
+                    Bharat Scientific Instruments
+                </h4>
+            </a>
+        </div>
+        <div class="col-md-1 d-md-block d-sm-none"></div>
+
+        <div class="col-md-4 col-sm-12 topNavigation" style="justify-content: space-around">
+            <nav>
+                <div class="nav nav-tabs" id="top-horizontal-navigator" role="tablist">
+                    <a class="nav-item nav-link active" href="#section0" aria-selected="true">Home</a>
+                    <a class="nav-item nav-link" href="#section_products" aria-selected="false">Products</a>
+                    <a class="nav-item nav-link" href="#section4" aria-selected="false">Section 4</a>
+                    <a class="nav-item nav-link" href="#section5" aria-selected="false">Section 5</a>
+                </div>
+                <script>
+                    // Get the container element
+                    var btnContainer = document.getElementById("top-horizontal-navigator");
+
+                    // Get all buttons with class="nav-item" inside the container
+                    var btns = btnContainer.getElementsByClassName("nav-item");
+
+                    // Loop through the buttons and add the active class to the current/clicked button
+                    for (var i = 0; i < btns.length; i++) {
+                        btns[i].addEventListener("click", function () {
+                            var current = document.getElementsByClassName("active");
+                            current[0].className = current[0].className.replace(" active", "");
+                            this.className += " active";
+
+                            var bnrs = document.getElementsByClassName("topBanner")
+                            var currentBnr;
+                            for (var j = 0; j < bnrs.length; j++) {
+                                var section = bnrs[j];
+                                //console.log(section);
+                                //console.log(section.className.indexOf("d-none"))
+                                if (section.className.indexOf("d-none") < 0) {
+                                    section.className = "d-none " + section.className;
+                                    current = section;
+                                }
+                            }
+                            //console.log("source : " + currentBnr);
+                            //console.log("target : " + this.getAttribute("href").replace("#", ""))
+                            var sectionTarget = document.getElementById(this.getAttribute("href").replace("#", ""));
+                            sectionTarget.className = sectionTarget.className.replace("d-none ", "");
+                            sectionTarget.className = sectionTarget.className.replace("d-none", "");
+
+                            console.log(bnrs)
+                        });
+                    }
+
+
+                </script>
+            </nav>
+        </div>
+
+        <div class="col-md-1 d-md-block d-sm-none"></div>
+        <div class="col-md-3 col-sm-12 justify-content-center">
+            <form class="form-inline justify-content-center" style="color:#343a40;" autocomplete="off">
+                <div class="form-group">
+                    <input id="myInput" class="form-control mr-1 mb-3" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success-dark mr-1 mb-3" type="submit">Go</button>
+                </div>
+            </form>
+        </div>
+
+        <!--<form lass="col-md-3 d-sm-12" autocomplete="off" style="color: black">
+            <div class="autocomplete" style="width:200px;">
+              <input id="myInput" type="text" name="myCountry" placeholder="Search">
+            </div>
+            <input class="btn-outline-success-dark" type="submit" name="Go">
+          </form>-->
+          
+
+        
+
+    </div>
+
+
+
+    <div id="section0" class="carousel slide col-md-12 topBanner banner" data-ride="carousel">
+        <div class="carousel-inner col-12 row">
+            <div class="carousel-item active">
+                <img src="la.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="la.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item">
+                <img src="la.jpg" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        
+    </div>
+    
+    <div class="d-none row col-md-12 topBanner align-items-start justify-content-center" id="section_products"
+        style="margin-top: 15vh;">
+
+        <!--<div class="embed-responsive embed-responsive-16by9">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>
+        </div>-->
+
+        <div class="row justify-content-center" style="padding-top: 2rem;">
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+            <div class="card m-2" style="width: 15rem;">
+                <img src="imgs/products/MagnetronGun/HVMSSSPC2FMain.jpg" class="card-img-top" alt="Magnetron Gun">
+                <div class="card-body" style="background-color: #343a40;">
+                    <h5 class="card-title">HVMSS-SPC-2F</h5>
+                    <p class="card-text">High Vacuum Magnetron Sputter Source with Flexible Head & Quick Connector</p>
+                    <a href="#" class="btn btn-primary btn-dark">Specifications</a>
+                </div>
+            </div>
+
+        </div>
+
+
+
+        <div class="col-md-12" style="margin: 1%">
+            <a href="#section1" class="col-md-4 btn btn-primary btn-dark">Know More</a>
+        </div>
+    </div>
+
+    <div class="d-none row col-md-12 topBanner banner" id="section2">
+        <nav class="col-md-3 vertical-navigator">
+            <div class="nav nav-tabs vertical-navigator" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                    aria-controls="nav-home" aria-selected="true">Home</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                    aria-controls="nav-profile" aria-selected="false">Profile</a>
+                <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                    aria-controls="nav-contact" aria-selected="false">Contact</a>
+            </div>
+        </nav>
+
+
+        <div class="tab-content col-md-9 image-slider" id="nav-tabContent" style="padding: 5%">
+            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
+
+                <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" style="height: 50%;">
+                    <ol class="carousel-indicators">
+                        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+                        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+                    </ol>
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="la.jpg" alt="First slide">
+                            <div class="carousel-caption d-none d-md-block" style="color: honeydew">
+                                <h5>LA</h5>
+                                <p>LAP</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="la.jpg" alt="Second slide">
+                            <div class="carousel-caption d-none d-md-block" style="color: honeydew">
+                                <h5>ny</h5>
+                                <p>nyP</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="la.jpg" alt="Third slide">
+                            <div class="carousel-caption d-none d-md-block" style="color: honeydew">
+                                <h5>chicago</h5>
+                                <p>chicagoP</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+
+            </div>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+
+                Eu deserunt labore elit aliquip laborum ex deserunt cupidatat tempor minim fugiat. Irure do voluptate
+                incididunt sit minim
+                consequat occaecat ad nisi aute. Cupidatat excepteur exercitation mollit ea proident incididunt
+                exercitation
+                Lorem velit laborum anim qui eu ullamco. Pariatur est velit ea deserunt nulla veniam sit pariatur
+                proident
+                velit mollit. Est aliquip enim duis ea elit eiusmod enim Lorem ad et. Ea amet enim Lorem commodo ut eu
+                nulla
+                velit et aliqua. Do eiusmod Lorem irure exercitation id anim elit est aliquip cupidatat Lorem
+                adipisicing
+                amet id.
+
+            </div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+
+                Consequat velit reprehenderit nostrud tempor laboris. Mollit cupidatat pariatur exercitation sunt nisi
+                pariatur duis consectetur
+                voluptate. Occaecat eu do ut cillum. Enim labore incididunt officia eiusmod non est et cupidatat. Et
+                consectetur
+                aliqua sunt culpa amet elit. Ea sunt ad non eiusmod fugiat laboris sint labore excepteur veniam labore
+                veniam
+                occaecat.
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="d-none row col-md-12 topBanner banner" id="section3">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+
+        </div>
+        <div class="col-md-12" style="margin: 1%">
+            <a href="#section4" class="col-md-4 btn btn-primary btn-dark">Know More</a>
+        </div>
+    </div>
+    <div class="d-none row col-md-12 topBanner banner" id="section4">
+        <div class="col-md-4"></div>
+        <div class="col-md-8">
+
+        </div>
+        <div class="col-md-12" style="margin: 1%">
+            <a href="#section5" class="col-md-4 btn btn-primary btn-dark">Know More</a>
+        </div>
+    </div>
+
+    <div class="d-none row col-md-12 topBanner banner" id="section5" style="background-color: #343a40">
+        <div class="col-md-12" style="height: 20%;">
+            <h1>Big Title</h1>
+        </div>
+        <div class="col-md-12" style="height: 50%;">
+            <p>Consectetur id aliquip nisi elit consectetur ipsum tempor nisi magna culpa incididunt. Incididunt voluptate
+                irure
+                enim excepteur ipsum culpa reprehenderit proident qui sunt fugiat do in. Eiusmod quis et qui aliqua fugiat
+                voluptate
+                laboris tempor mollit officia ea veniam. Aute elit proident voluptate dolore do cillum Lorem sit ea ex
+                deserunt
+                ex dolore nostrud. Ut culpa quis velit Lorem fugiat ex proident nisi. Labore et Lorem est elit proident amet
+                sint sunt excepteur et occaecat voluptate.</p>
+            </div>
+            <div class="col-md-12 align-items-end">
+                <ul id="social-buttons" class="social-network social-circle justify-content-center">
+                    <li><a href="#" class="icoRss" title="Rss"><i class="fa fa-rss"></i></a></li>
+                    <li><a href="#" class="icoFacebook" title="Facebook"><i class="fa fa-facebook"></i></a></li>
+                    <li><a href="#" class="icoTwitter" title="Twitter"><i class="fa fa-twitter"></i></a></li>
+                    <li><a href="#" class="icoGoogle" title="Google +"><i class="fa fa-google-plus"></i></a></li>
+                    
+                    <li><a href="#" class="icoLinkedin" title="Linkedin"><i class="fa fa-linkedin"></i></a></li>
+                </ul>
+            </div>
+    </div>
+
+
+    <script>
+        function autocomplete(inp, arr) {
+            /*the autocomplete function takes two arguments,
+            the text field element and an array of possible autocompleted values:*/
+            var currentFocus;
+            /*execute a function when someone writes in the text field:*/
+            inp.addEventListener("input", function (e) {
+                var a, b, i, val = this.value;
+                /*close any already open lists of autocompleted values*/
+                closeAllLists();
+                if (!val) { return false; }
+                currentFocus = -1;
+                /*create a DIV element that will contain the items (values):*/
+                a = document.createElement("DIV");
+                a.setAttribute("id", this.id + "autocomplete-list");
+                a.setAttribute("class", "autocomplete-items");
+                /*append the DIV element as a child of the autocomplete container:*/
+                this.parentNode.appendChild(a);
+                /*for each item in the array...*/
+                for (i = 0; i < arr.length; i++) {
+                    /*check if the item starts with the same letters as the text field value:*/
+                    //if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+                    var startIndex = arr[i].toUpperCase().indexOf(val.toUpperCase());
+                    if (startIndex > -1) {
+                        /*create a DIV element for each matching element:*/
+                        b = document.createElement("DIV");
+                        /*make the matching letters bold:*/
+                        b.innerHTML = arr[i].substr(0, startIndex);
+                        b.innerHTML += "<strong>" + arr[i].substr(startIndex, val.length) + "</strong>";
+                        b.innerHTML += arr[i].substr(startIndex+val.length);
+                        /*insert a input field that will hold the current array item's value:*/
+                        b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+                        /*execute a function when someone clicks on the item value (DIV element):*/
+                        b.addEventListener("click", function (e) {
+                            /*insert the value for the autocomplete text field:*/
+                            inp.value = this.getElementsByTagName("input")[0].value;
+                            /*close the list of autocompleted values,
+                            (or any other open lists of autocompleted values:*/
+                            closeAllLists();
+                        });
+                        a.appendChild(b);
+                    }
+                }
+            });
+            /*execute a function presses a key on the keyboard:*/
+            inp.addEventListener("keydown", function (e) {
+                var x = document.getElementById(this.id + "autocomplete-list");
+                if (x) x = x.getElementsByTagName("div");
+                if (e.keyCode == 40) {
+                    /*If the arrow DOWN key is pressed,
+                    increase the currentFocus variable:*/
+                    currentFocus++;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 38) { //up
+                    /*If the arrow UP key is pressed,
+                    decrease the currentFocus variable:*/
+                    currentFocus--;
+                    /*and and make the current item more visible:*/
+                    addActive(x);
+                } else if (e.keyCode == 13) {
+                    /*If the ENTER key is pressed, prevent the form from being submitted,*/
+                    e.preventDefault();
+                    if (currentFocus > -1) {
+                        /*and simulate a click on the "active" item:*/
+                        if (x) x[currentFocus].click();
+                    }
+                }
+            });
+            function addActive(x) {
+                /*a function to classify an item as "active":*/
+                if (!x) return false;
+                /*start by removing the "active" class on all items:*/
+                removeActive(x);
+                if (currentFocus >= x.length) currentFocus = 0;
+                if (currentFocus < 0) currentFocus = (x.length - 1);
+                /*add class "autocomplete-active":*/
+                x[currentFocus].classList.add("autocomplete-active");
+            }
+            function removeActive(x) {
+                /*a function to remove the "active" class from all autocomplete items:*/
+                for (var i = 0; i < x.length; i++) {
+                    x[i].classList.remove("autocomplete-active");
+                }
+            }
+            function closeAllLists(elmnt) {
+                /*close all autocomplete lists in the document,
+                except the one passed as an argument:*/
+                var x = document.getElementsByClassName("autocomplete-items");
+                for (var i = 0; i < x.length; i++) {
+                    if (elmnt != x[i] && elmnt != inp) {
+                        x[i].parentNode.removeChild(x[i]);
+                    }
+                }
+            }
+            /*execute a function when someone clicks in the document:*/
+            document.addEventListener("click", function (e) {
+                closeAllLists(e.target);
+            });
+        }
+
+        /*An array containing all the country names in the world:*/
+        //var countries = ["Afghanistan", "Albania", "Algeria", "Andorra", "Angola", "Anguilla", "Antigua & Barbuda", "Argentina", "Armenia", "Aruba", "Australia", "Austria", "Azerbaijan", "Bahamas", "Bahrain", "Bangladesh", "Barbados", "Belarus", "Belgium", "Belize", "Benin", "Bermuda", "Bhutan", "Bolivia", "Bosnia & Herzegovina", "Botswana", "Brazil", "British Virgin Islands", "Brunei", "Bulgaria", "Burkina Faso", "Burundi", "Cambodia", "Cameroon", "Canada", "Cape Verde", "Cayman Islands", "Central Arfrican Republic", "Chad", "Chile", "China", "Colombia", "Congo", "Cook Islands", "Costa Rica", "Cote D Ivoire", "Croatia", "Cuba", "Curacao", "Cyprus", "Czech Republic", "Denmark", "Djibouti", "Dominica", "Dominican Republic", "Ecuador", "Egypt", "El Salvador", "Equatorial Guinea", "Eritrea", "Estonia", "Ethiopia", "Falkland Islands", "Faroe Islands", "Fiji", "Finland", "France", "French Polynesia", "French West Indies", "Gabon", "Gambia", "Georgia", "Germany", "Ghana", "Gibraltar", "Greece", "Greenland", "Grenada", "Guam", "Guatemala", "Guernsey", "Guinea", "Guinea Bissau", "Guyana", "Haiti", "Honduras", "Hong Kong", "Hungary", "Iceland", "India", "Indonesia", "Iran", "Iraq", "Ireland", "Isle of Man", "Israel", "Italy", "Jamaica", "Japan", "Jersey", "Jordan", "Kazakhstan", "Kenya", "Kiribati", "Kosovo", "Kuwait", "Kyrgyzstan", "Laos", "Latvia", "Lebanon", "Lesotho", "Liberia", "Libya", "Liechtenstein", "Lithuania", "Luxembourg", "Macau", "Macedonia", "Madagascar", "Malawi", "Malaysia", "Maldives", "Mali", "Malta", "Marshall Islands", "Mauritania", "Mauritius", "Mexico", "Micronesia", "Moldova", "Monaco", "Mongolia", "Montenegro", "Montserrat", "Morocco", "Mozambique", "Myanmar", "Namibia", "Nauro", "Nepal", "Netherlands", "Netherlands Antilles", "New Caledonia", "New Zealand", "Nicaragua", "Niger", "Nigeria", "North Korea", "Norway", "Oman", "Pakistan", "Palau", "Palestine", "Panama", "Papua New Guinea", "Paraguay", "Peru", "Philippines", "Poland", "Portugal", "Puerto Rico", "Qatar", "Reunion", "Romania", "Russia", "Rwanda", "Saint Pierre & Miquelon", "Samoa", "San Marino", "Sao Tome and Principe", "Saudi Arabia", "Senegal", "Serbia", "Seychelles", "Sierra Leone", "Singapore", "Slovakia", "Slovenia", "Solomon Islands", "Somalia", "South Africa", "South Korea", "South Sudan", "Spain", "Sri Lanka", "St Kitts & Nevis", "St Lucia", "St Vincent", "Sudan", "Suriname", "Swaziland", "Sweden", "Switzerland", "Syria", "Taiwan", "Tajikistan", "Tanzania", "Thailand", "Timor L'Este", "Togo", "Tonga", "Trinidad & Tobago", "Tunisia", "Turkey", "Turkmenistan", "Turks & Caicos", "Tuvalu", "Uganda", "Ukraine", "United Arab Emirates", "United Kingdom", "United States of America", "Uruguay", "Uzbekistan", "Vanuatu", "Vatican City", "Venezuela", "Vietnam", "Virgin Islands (US)", "Yemen", "Zambia", "Zimbabwe"];
+        var dataArray = [];
+        var cards = document.getElementsByClassName("card");
+        for(var i=0; i < cards.length; i++){
+            dataArray.push(cards[i].getElementsByTagName("h5")[0].innerHTML)
+        }
+        /*initiate the autocomplete function on the "myInput" element, and pass along the countries array as possible autocomplete values:*/
+        autocomplete(document.getElementById("myInput"), dataArray);
+    </script>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+        integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+        <script>
+            console.log(document.getElementById('someDiv').style);//.style.height);
+        </script>
+</body>
+
+</html>

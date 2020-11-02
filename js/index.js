@@ -1,5 +1,5 @@
 var index = 1;
-if(window.location.pathname == "/"){
+if(window.location.pathname == "/" || window.location.pathname == "/index4.html"){
     $('.carousel').carousel({
         interval: 2000
     })

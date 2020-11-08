@@ -4,21 +4,6 @@ if(window.location.pathname == "/" || window.location.pathname == "/index4.html"
         interval: 2000
     })
     setTitle(Object.keys(products)[0]);
-    $('#demo').on('slide.bs.carousel', function () {
-        let k = 0;
-        let prodName = "";
-        for(prod in products){
-            if(k==index)
-                prodName = prod;
-            k++;
-        }
-        //console.log(prodName);
-        setTitle(prodName);
-        index++;
-        if(index == productCount){
-            index = 0;
-        }
-    })
     let carousel_indicators = document.getElementsByClassName("carousel-indicators");
     let count = 0;
     for(prod in products){
@@ -88,3 +73,20 @@ function setTitle(prodName) {
     ele.appendChild(description);
 }
 
+$(document).ready(function(){
+    $('#demo').on('slide.bs.carousel', function () {
+        let k = 0;
+        let prodName = "";
+        for(prod in products){
+            if(k==index)
+                prodName = prod;
+            k++;
+        }
+        console.log(prodName);
+        setTitle(prodName);
+        index++;
+        if(index == productCount){
+            index = 0;
+        }
+    })
+})
